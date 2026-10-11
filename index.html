@@ -1,0 +1,148 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelMate AI - Audio Travel Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="brand">✈️ TravelMate AI</div>
+    <span class="tag">YOUR PERSONAL AUDIO TOUR GUIDE</span>
+    <h1>Discover the world,<br><span>one story at a time.</span></h1>
+    <p>Explore famous destinations with AI-powered travel stories
+      and natural-sounding audio narration.</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>🌍 Create your travel guide</h2>
+
+      <form id="guide-form">
+        <label for="place">Destination</label>
+        <input id="place" name="place" required maxlength="200"
+          placeholder="e.g. Taj Mahal, Agra">
+
+        <div class="two-columns">
+          <div>
+            <label for="language">Narration language</label>
+            <select id="language" name="language">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Tamil">Tamil</option>
+              <option value="Telugu">Telugu</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="answerType">Guide length</label>
+            <select id="answerType" name="answerType">
+              <option value="Summary">Quick summary</option>
+              <option value="Detailed">Detailed story</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="voiceId">🎙️ Choose Murf voice</label>
+        <select id="voiceId" name="voiceId" required>
+          <option value="">-- Select a voice --</option>
+          <option value="Joshua">Joshua</option>
+          <option value="Nimisha">Nimisha</option>
+          <option value="Bertie">Bertie</option>
+          <option value="Gordon">Gordon</option>
+          <option value="Isadora">Isadora</option>
+          <option value="Lara">Lara</option>
+          <option value="Alicia">Alicia</option>
+          <option value="Caleb">Caleb</option>
+          <option value="Carlos">Carlos</option>
+          <option value="Edmund">Edmund</option>
+          <option value="Judith">Judith</option>
+          <option value="Elvira">Elvira</option>
+          <option value="Zion">Zion</option>
+          <option value="Heidi">Heidi</option>
+          <option value="Blazej">Blazej</option>
+          <option value="Natalie">Natalie</option>
+          <option value="Amara">Amara</option>
+          <option value="Molly">Molly</option>
+          <option value="Michelle">Michelle</option>
+          <option value="Wayne">Wayne</option>
+          <option value="Miles">Miles</option>
+          <option value="Daisy">Daisy</option>
+          <option value="Daniel">Daniel</option>
+          <option value="Alina">Alina</option>
+          <option value="Josie">Josie</option>
+          <option value="Ariana">Ariana</option>
+          <option value="Matthew">Matthew</option>
+          <option value="Luna">Luna</option>
+          <option value="Will">Will</option>
+          <option value="Madison">Madison</option>
+          <option value="Grant">Grant</option>
+          <option value="Ezekiel">Ezekiel</option>
+          <option value="Carmen">Carmen</option>
+          <option value="Merel">Merel</option>
+          <option value="Abirami">Abirami</option>
+          <option value="Diya">Diya</option>
+        </select>
+
+        <label for="locale">Voice locale</label>
+        <select id="locale" name="locale">
+          <option value="en-US">English (US) — en-US</option>
+          <option value="en-IN">English (India) — en-IN</option>
+          <option value="hi-IN">Hindi — hi-IN</option>
+          <option value="ta-IN">Tamil — ta-IN</option>
+          <option value="te-IN">Telugu — te-IN</option>
+        </select>
+
+        <p class="hint">
+          Choose a voice and a compatible narration language.
+        </p>
+
+        <button id="generate-btn" type="submit">
+          ✨ Generate my audio guide
+        </button>
+      </form>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel result">
+      <h2>🎧 Your travel story</h2>
+
+      <p class="muted">
+        Your travel story will appear here after successful generation.
+      </p>
+
+      <div id="description" class="description">
+        Enter your destination, choose your language and voice, and click
+        "Generate my audio guide" to explore your destination.
+      </div>
+
+      <div id="audio-controls" class="audio-controls" hidden>
+        <h3>🔊 Your Audio Guide</h3>
+
+        <audio id="audio-player" controls preload="metadata">
+          Your browser does not support audio playback.
+        </audio>
+
+        <div class="audio-buttons">
+          <button id="play-audio" type="button">▶ Play</button>
+          <button id="pause-audio" type="button">⏸ Pause</button>
+          <button id="download-audio" type="button">
+            ⬇ Download MP3
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Made with Gemini AI + Murf AI · Travel smarter, explore more ✨
+  </footer>
+
+</body>
+</html>
+```
